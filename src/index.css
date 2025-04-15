@@ -1,0 +1,175 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 100% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 100% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 100% 13%;
+
+    --primary: 227 97% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 100% 13%;
+    --secondary-foreground: 227 97% 61%;
+
+    --muted: 227 97% 92%;
+    --muted-foreground: 240 100% 13%;
+
+    --accent: 227 97% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 227 97% 61%;
+    --input: 227 97% 61%;
+    --ring: 227 97% 61%;
+
+    --radius: 0.5rem;
+  }
+
+  [data-theme="default"] {
+    --background: 222.2 84% 14.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 217.2 32.6% 17.5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217.2 32.6% 17.5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 227 97% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 217.2 32.6% 17.5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217.2 32.6% 17.5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 217.2 32.6% 17.5%;
+
+    --radius: 0.5rem;
+  }
+
+  [data-theme="default"].dark {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 100% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 100% 13%;
+
+    --primary: 227 97% 61%;
+    --primary-foreground: 240 100% 13%;
+
+    --secondary: 240 100% 13%;
+    --secondary-foreground: 227 97% 61%;
+
+    --muted: 227 97% 87%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 227 97% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 227 97% 61%;
+    --input: 227 97% 61%;
+    --ring: 0 0% 100%;
+  }
+
+  [data-theme="theme2"] span[data-theme="default"] {
+    display: none;
+  }
+
+  [data-theme="theme2"] span[data-theme="theme2"] {
+    display: block;
+  }
+
+  [data-theme="default"] span[data-theme="theme2"] {
+    display: none;
+  }
+
+  [data-theme="default"] span[data-theme="default"] {
+    display: block;
+  }
+
+  /* Add styles for theme-specific button display */
+  [data-theme="theme2"] button[data-theme="default"] {
+    display: none;
+  }
+
+  [data-theme="theme2"] button[data-theme="theme2"] {
+    display: flex;
+  }
+
+  [data-theme="default"] button[data-theme="theme2"] {
+    display: none;
+  }
+
+  [data-theme="default"] button[data-theme="default"] {
+    display: flex;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
